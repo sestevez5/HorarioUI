@@ -1,0 +1,81 @@
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+.seccion {
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 8px;
+  padding: 7px;
+}
+
+.contenido {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 7fr;
+  padding: 10px;
+}
+
+.seccionCuerpo {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+  height: 1200px;
+  padding: 0px;
+}
+
+.seccionDatos  {
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 8px;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.seccionGrafico {
+  grid-row: 1;
+  grid-column: 2;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 8px;
+}
+
+.card-panel {
+  grid-column: 1;
+}
+
+.svg-container {
+  margin: 7.25px 0px 14px;
+  width: 100%;
+  height: 80%;
+  overflow-y: hidden; 
+  overflow-x: hidden;
+}
+
+#ultimaAccion {
+  margin-left: 40px;
+}
+
+.campo {
+  display: flex;
+  align-content: stretch;
+  margin-bottom: 5px;
+}
+
+.contenidoCampoActividad {
+  font-weight: bold;
+  width: 90%;
+  margin-left: 20px;
+}
+
+.etiquetaCampoActividad {
+  width: 230px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Demo Gráfico Horario Ekade</title>
+
+      <!-------------------------------------->
+      <!--  ELEMENTOS OPCIONAL (PARA DEMO)  -->
+      <!-------------------------------------->
+
+      <!-- Estilo Materialize ( Solo para la demo ) -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <!-- Estilo de la propia demo -->
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+      <!-------------------------------------->
+      <!--           OBLIGATORIO            -->
+      <!-------------------------------------->
+
+      <!-- Iconos awesome 5 -->
+      <script src="https://kit.fontawesome.com/2bfcce1720.js" crossorigin="anonymous"></script>
+
+      <!-- Librería para el renderizado del gráfico. -->
+      <script src="../dist/graficoHorarioEkade.js"></script>
+     
+      
+  </head>
+
+  <body>
+
+    <div class="contenido">
+
+      <!-- Cabecera: mensajes de acciones realizadas por el usuario. -->
+      <div class="seccion seccionCabecera">
+        <div >
+          <h5 class="blue-text text-darken-3">Última acción: </h5>
+          <h5 id="ultimaAccion" class="blue-text ">-- Aún no se han realizado acciones --</h5>
+        </div>
+      </div>
+
+      <!-- Cuerpo: contiene dos paneles: Datos de la actividad (izquierdo) y horario (derecho) -->
+      <div class="seccionCuerpo">
+
+        <!-- Panel izquierdo del cuerpo-->
+        <div class="seccion seccionDatos">
+          <h5>Datos de la actividad en la última interacción:</h5>
+          <div class="subSeccionActividad">
+            <div class="campo"><div class="etiquetaCampoActividad">Identificado de la actividad:</div> <div class="contenidoCampoActividad" id="act_idActividad">-- No establecida --</div></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Tipo de Actividad:</div> <div class="contenidoCampoActividad" id="act_tipoActividad"></div></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Sesión:</div> <span class="contenidoCampoActividad" id="act_sesion"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Periodo de vigencia:</div> <span class="contenidoCampoActividad" id="act_periodoVigencia"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Docentes que la imparten:</div> <span class="contenidoCampoActividad"  id="act_docentes"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Grupos:</div> <span class="contenidoCampoActividad"  id="act_grupos"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Espacio físico utilizado:</div> <span class="contenidoCampoActividad" id="act_espacioFisico"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Asignaturas impartidas:</div> <span class="contenidoCampoActividad" id="act_asignaturas"></span></div>
+            <div class="campo"><div class="etiquetaCampoActividad">Observaciones:</div> <span class="contenidoCampoActividad" id="act_observaciones"></span></div>
+
+                  
+        
+          </div>
+        </div>
+        
+        <!-- Panel derecho del cuerpo -->
+        <div class="seccion seccionGrafico">
+          <!-- Panel en el que se renderiza el horario -->
+          <div class="svg-container" id="horario"></div>
+        </div>
+
+      </div>
+
+
+    
+    </div>
+
+    <!-- Código de la demo -->
+    <script src="js/index.js"></script>
+  </body>
+
+  </html>
