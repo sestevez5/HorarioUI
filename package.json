@@ -7,7 +7,6 @@
     "d3": "^7.6.1",
     "rxjs": "^7.5.7"
   },
-  
   "scripts": {
     "develop": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
